@@ -68,8 +68,8 @@ BOARD_USES_ALSA_AUDIO := true
 TARGET_RECOVERY_FSTAB := device/lge/l1v/fstab.l1v
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 ENABLE_LOKI_RECOVERY := true
-BOARD_CUSTOM_GRAPHICS:= ../../../device/lge/l1m/recovery/graphics.c
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/lge/l1m/recovery/recovery_keys.c
+BOARD_CUSTOM_GRAPHICS:= ../../../device/lge/l1v/recovery/graphics.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/lge/l1v/recovery/recovery_keys.c
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_HAS_NO_SELECT_BUTTON := true
 
