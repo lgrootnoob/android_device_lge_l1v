@@ -3,6 +3,7 @@ USE_CAMERA_STUB := true
 # -include vendor/lge/l1v/BoardConfigVendor.mk
 # No prop vendor tree avail
 # TARGET_TOOLS_PREFIX := /home/jacob/Desktop/cyan/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-
+RECOVERY_FSTAB_VERSION = 2
 TARGET_POWERHAL_VARIANT := cm
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT_FPU := vfpv3
