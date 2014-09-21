@@ -3,6 +3,7 @@ USE_CAMERA_STUB := true
 # -include vendor/lge/l1v/BoardConfigVendor.mk
 # No prop vendor tree avail
 # TARGET_TOOLS_PREFIX := /home/jacob/Desktop/cyan/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 RECOVERY_FSTAB_VERSION = 2
 TARGET_POWERHAL_VARIANT := cm
 TARGET_ARCH := arm
@@ -31,12 +32,12 @@ TARGET_KRAIT_BIONIC_PLDOFFS := 10
 TARGET_KRAIT_BIONIC_PLDTHRESH := 10
 TARGET_KRAIT_BIONIC_BBTHRESH := 64
 TARGET_KRAIT_BIONIC_PLDSIZE := 64
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0xBB8000
+#BOARD_BOOTIMAGE_PARTITION_SIZE := 12288
 # Maybe 0xBB8000 or 6291456 below, not sure. Still expirementing.
 # So apparently its cat /proc/partitions that numerical value kilobytes to megabytes compare it to the output of dd if=/dev/zero of=thepartition if it matches then turn those kilobytes into hex!
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0xBB8000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x1CC000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x3FAA00
+#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 12288
+#BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1884160
+#BOARD_USERDATAIMAGE_PARTITION_SIZE := 4172322
 BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
