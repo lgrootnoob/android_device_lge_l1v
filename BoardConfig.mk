@@ -33,9 +33,10 @@ TARGET_KRAIT_BIONIC_BBTHRESH := 64
 TARGET_KRAIT_BIONIC_PLDSIZE := 64
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0xBB8000
 # Maybe 0xBB8000 or 6291456 below, not sure. Still expirementing.
+# So apparently its cat /proc/partitions that numerical value kilobytes to megabytes compare it to the output of dd if=/dev/zero of=thepartition if it matches then turn those kilobytes into hex!
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0xBB8000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x3FA000000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x1CC000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x3FAA00
 BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
