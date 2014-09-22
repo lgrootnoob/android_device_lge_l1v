@@ -21,9 +21,11 @@ TARGET_BOOTLOADER_BOARD_NAME := l1v
 BOARD_USES_QCOM_HARDWARE := true
 USE_OPENGL_RENDERER := true
 TARGET_NO_HW_VSYNC := true
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_USES_ION := true
 ENABLE_LOKI_RECOVERY := true
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=l1v lpj=67667
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=l1v lpj=67667 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
@@ -33,8 +35,7 @@ TARGET_KRAIT_BIONIC_PLDTHRESH := 10
 TARGET_KRAIT_BIONIC_BBTHRESH := 64
 TARGET_KRAIT_BIONIC_PLDSIZE := 64
 #BOARD_BOOTIMAGE_PARTITION_SIZE := 50331648
-# Maybe 0xBB8000 or 6291456 below, not sure. Still expirementing.
-# So apparently its cat /proc/partitions that numerical value kilobytes to megabytes compare it to the output of dd if=/dev/zero of=thepartition if it matches then turn those kilobytes into hex!
+# cat /proc/partitions*block size so for recovery mmcblk0p19 is 12288*4096
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 50331648
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 7717519360
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 17089830912
@@ -43,11 +44,9 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USES_ADRENO_200 := true
 # Loki doesnt like the below so it was commented out
-# BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x82200000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x82200000
 TARGET_QCOM_DISPLAY_VARIANT := legacy
 BOARD_EGL_NEEDS_LEGACY_FB := true
-# TARGET_PREBUILT_KERNEL := device/lge/l1v/kernel
-# LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 # Let it find target kernel source by itself
 # However, still specify config.
 TARGET_BOOTANIMATION_NAME := vertical-540x960

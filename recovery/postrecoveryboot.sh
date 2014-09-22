@@ -15,5 +15,8 @@ echo "I:Postrecoveryboot script started!" >> /cache/recovery/log
 busybox dd if=/dev/zero of=/dev/block/platform/msm_sdcc.1/by-name/misc conv=notrunc bs=1 count=32 seek=64
 
 # Tell us that it worked!
-echo "I:LGE MISC flag reset" >> /cache/recovery/log
-mount /external_sd
+echo $(mount) >> /cache/recovery/log
+busybox mount /system
+rm /system/app/CloudSetupWizard.apk
+rm /system/app/LGVZWSetupWizard_JB.apk
+echo $(mount) >> /cache/recovery/log
