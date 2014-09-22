@@ -44,8 +44,8 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USES_ADRENO_200 := true
 # Loki doesnt like the below so it was commented out
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x82200000
-TARGET_QCOM_DISPLAY_VARIANT := legacy
+# BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x82200000
+TARGET_QCOM_DISPLAY_VARIANT := caf
 BOARD_EGL_NEEDS_LEGACY_FB := true
 # Let it find target kernel source by itself
 # However, still specify config.
