@@ -17,8 +17,6 @@
 /dev/block/platform/msm_sdcc.1/by-name/tz /tz emmc defaults defaults
 /dev/block/platform/msm_sdcc.1/by-name/rpm /rpm emmc defaults defaults
 /dev/block/platform/msm_sdcc.1/by-name/aboot /aboot emmc defaults defaults
-/devices/platform/msm_sdcc.3/mmc_host       /storage/external_SD    auto    defaults    voldmanaged=sdcard:auto
-/dev/block/platform/msm_sdcc.3/by-num/p1    /external_sd            vfat    defaults    recoveryonly
-/sys/devices/platform/msm_sdcc.2/mmc_host/mmc2 /sdcard auto default voldmanaged=sdcard:auto
+/dev/block/platform/msm_sdcc.3/by-num/p1    /external_sd            vfat    defaults    defaults
 ## USB Storage
 /devices/platform/msm_hsusb_host/usb        /storage/usbdisk0       auto    defaults    voldmanaged=sda:auto
