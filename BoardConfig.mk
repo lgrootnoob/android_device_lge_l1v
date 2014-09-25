@@ -26,7 +26,7 @@ TARGET_USES_ION := true
 ENABLE_LOKI_RECOVERY := true
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=l1v lpj=67667 androidboot.selinux=permissive
-BOARD_KERNEL_BASE := 0x80200000
+BOARD_KERNEL_BASE := 0x80208000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 TARGET_USE_KRAIT_PLD_SET := true
@@ -44,7 +44,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USES_ADRENO_200 := true
 # Loki doesnt like the below so it was commented out
-# BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x82200000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81200000
 TARGET_QCOM_DISPLAY_VARIANT := caf
 BOARD_EGL_NEEDS_LEGACY_FB := true
 # Let it find target kernel source by itself

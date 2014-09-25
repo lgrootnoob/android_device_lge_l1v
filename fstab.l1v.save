@@ -5,8 +5,7 @@
 /dev/block/platform/msm_sdcc.1/by-name/system /system ext4 ro,barrier=1 wait
 /dev/block/platform/msm_sdcc.1/by-name/cache /cache ext4 noatime,nosuid,nodev,barrier=1,data=ordered wait,check
 /dev/block/platform/msm_sdcc.1/by-name/persist /persist ext4 nosuid,nodev,barrier=1,data=ordered,nodelalloc wait
-#/dev/block/platform/msm_sdcc.1/by-name/modem /firmware auto ro,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:radio_efs_file:s0 wait
-/dev/block/platform/msm_sdcc.1/by-name/userdata /data ext4 noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc wait,check,encryptable=/dev/block/platform/msm_sdcc.1/by-name/metadata
+/dev/block/platform/msm_sdcc.1/by-name/modem /firmware vfat ro,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:radio_efs_file:s0 wait
 /dev/block/platform/msm_sdcc.1/by-name/boot /boot emmc defaults defaults
 /dev/block/platform/msm_sdcc.1/by-name/recovery /recovery emmc defaults defaults
 /dev/block/platform/msm_sdcc.1/by-name/misc /misc emmc defaults defaults
@@ -20,4 +19,4 @@
 /dev/block/platform/msm_sdcc.3/by-num/p1    /external_sd            vfat    defaults    defaults
 ## USB Storage
 /devices/platform/msm_hsusb_host/usb        /storage/usbdisk0       auto    defaults    voldmanaged=sda:auto
-#/external_sd/userdata.img /data ext4 loop,noatime,nosuid,nodev,data=ordered 0 0
+/external_sd/userdata.img /data ext4 loop,noatime,nosuid,nodev,data=ordered 0 0
