@@ -43,12 +43,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USES_ADRENO_200 := true
-# Loki doesnt like the below so it was commented out
-<<<<<<< HEAD
-# BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x82200000
-=======
-#BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81200000
->>>>>>> 5ffa58d... add twrp stuff
 TARGET_QCOM_DISPLAY_VARIANT := caf
 BOARD_EGL_NEEDS_LEGACY_FB := true
 # Let it find target kernel source by itself
