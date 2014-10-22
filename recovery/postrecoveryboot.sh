@@ -4,7 +4,7 @@ umount /system
 busybox mount -o rw /dev/block/mmcblk0p14 /system
 #busybox mount -o rw /dev/block/platform/msm_sdcc.3/by-num/p1 /external_sd
 echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-mke2fs -t ext4 /dev/block/platform/msm_sdcc.1/by-name/userdata
+#mke2fs -t ext4 /dev/block/platform/msm_sdcc.1/by-name/userdata
 #if [ ! -f /external_sd/userdata.img ]; then
 #	dd if=/dev/zero of=/external_sd/userdata.img bs=512 count=3906250
 #	mke2fs -F -t ext4 /external_sd/userdata.img
