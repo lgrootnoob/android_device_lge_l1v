@@ -51,16 +51,16 @@ TARGET_BOOTANIMATION_NAME := vertical-540x960
 BOARD_USES_SECURE_SERVICES := true
 
 # Wifi
-WPA_SUPPLICANT_VERSION := VER_0_8_X
-BOARD_WPA_SUPPLICANT_DRIVER	:= NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-BOARD_WLAN_DEVICE := bcmdhd
-WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcmdhd.bin"
-WIFI_DRIVER_FW_PATH_AP := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
-WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/fw_bcmdhd_p2p.bin"
+#WPA_SUPPLICANT_VERSION := VER_0_8_X
+#BOARD_WPA_SUPPLICANT_DRIVER	:= NL80211
+#BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+#BOARD_HOSTAPD_DRIVER := NL80211
+#BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+#BOARD_WLAN_DEVICE := bcmdhd
+#WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
+#WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcmdhd.bin"
+#WIFI_DRIVER_FW_PATH_AP := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
+#WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/fw_bcmdhd_p2p.bin"
 
 # Audio
 TARGET_USES_ION_AUDIO := true
@@ -102,3 +102,4 @@ DEVICE_RESOLUTION := 540x960
 TW_NO_REBOOT_BOOTLOADER := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
 PRODUCT_COPY_FILES += device/lge/l1v/fstab.l1v:recovery/root/etc/twrp.fstab
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
