@@ -98,8 +98,6 @@ TARGET_KERNEL_CONFIG := l1v-cyanogenmod_defconfig
 
 #twrp
 DEVICE_RESOLUTION := 540x960
-#RECOVERY_SDCARD_ON_DATA := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
-PRODUCT_COPY_FILES += device/lge/l1v/fstab.l1v:recovery/root/etc/twrp.fstab
 RECOVERY_GRAPHICS_USE_LINELENGTH := true

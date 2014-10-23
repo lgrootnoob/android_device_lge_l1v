@@ -5,7 +5,10 @@ LOCAL_PATH := device/lge/l1v
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
 	$(LOCAL_PATH)/fstab.l1v:root/fstab.l1v \
-	$(LOCAL_PATH)/fstab.l1v:root/recovery.fstab
+	$(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab \
+	$(LOCAL_PATH)/fstab:recovery/root/etc/fstab \
+	$(LOCAL_PATH)/fstab:root/etc/fstab \
+	$(LOCAL_PATH)/fstab.l1v:recovery/root/etc/recovery.fstab
 
 $(call inherit-product-if-exists, vendor/lge/l1v/l1v-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/lge/l1v/overlay

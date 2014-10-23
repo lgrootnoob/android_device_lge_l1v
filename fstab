@@ -1,0 +1,4 @@
+/dev/block/platform/msm_sdcc.1/by-name/cache /cache ext4 rw
+/dev/block/platform/msm_sdcc.3/by-num/p1 /external_sd vfat rw
+/external_sd/userdata.img /data ext4 loop,rw
+/dev/block/platform/msm_sdcc.1/by-name/system /system ext4 rw

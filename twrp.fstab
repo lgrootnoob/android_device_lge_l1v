@@ -1,0 +1,13 @@
+# mount point   fstype      device  [device2]                                [parameters]
+/system         ext4        /dev/block/platform/msm_sdcc.1/by-name/system
+/cache          ext4        /dev/block/platform/msm_sdcc.1/by-name/cache     noatime,nosuid,nodev
+/persist        ext4        /dev/block/platform/msm_sdcc.1/by-name/persist   nosuid,nodev
+/boot           emmc        /dev/block/platform/msm_sdcc.1/by-name/boot
+/recovery       emmc        /dev/block/platform/msm_sdcc.1/by-name/recovery
+/misc           emmc        /dev/block/platform/msm_sdcc.1/by-name/misc
+/radio          emmc        /dev/block/platform/msm_sdcc.1/by-name/modem
+/tz             emmc        /dev/block/platform/msm_sdcc.1/by-name/tz
+/rpm            emmc        /dev/block/platform/msm_sdcc.1/by-name/rpm
+/aboot          emmc        /dev/block/platform/msm_sdcc.1/by-name/aboot
+/external_sd    vfat        /dev/block/platform/msm_sdcc.3/by-num/p1         flags=display="Micro SDcard";storage;wipeingui
+/data           ext4        /external_sd/userdata.img                        loop,noatime,nosuid,nodev,data=ordered defaults
